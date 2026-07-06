@@ -14,9 +14,8 @@
         .title {
           text-align: center;
 
-          span {
+          span.orange {
             color: var(--color-gold);
-            font-style: italic;
           }
         }
       }
