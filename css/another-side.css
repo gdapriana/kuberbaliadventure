@@ -1,0 +1,420 @@
+#another-side {
+  background-color: var(--color-body);
+
+  .header-wrapper {
+    justify-content: center;
+    align-items: center;
+    .text-content {
+      justify-content: center;
+      align-items: center;
+      .tag,
+      .title {
+        text-align: center;
+
+        span.orange {
+          color: var(--color-gold);
+        }
+      }
+    }
+  }
+
+  .another-side-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 2.2fr 1fr;
+    }
+  }
+
+  .left-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1.25fr 0.75fr 1fr;
+    }
+  }
+
+  .box-lobby {
+    position: relative;
+    border-radius: 28px;
+    height: 260px;
+    overflow: hidden;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(8, 16, 13, 0.1) 0%,
+        rgba(8, 16, 13, 0.85) 100%
+      ),
+      url("../assets/another-side/lobby-vibes.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(15, 37, 30, 0.05);
+
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+
+    .community-badge {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background-color: rgba(8, 16, 13, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 0.45rem 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      z-index: 3;
+
+      .avatar-stack {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          border: 1.5px solid #08100d;
+          margin-left: -8px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .badge-text {
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #ffffff;
+
+        span {
+          color: var(--color-gold);
+          font-weight: 700;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+    .box-content {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      color: #ffffff;
+
+      h3 {
+        font-family: var(--font-primary);
+        letter-spacing: 1px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+      }
+
+      p {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: #d1dad6;
+        line-height: 1.5;
+        margin: 0;
+        max-width: 580px;
+      }
+    }
+  }
+
+  .box-menu {
+    position: relative;
+    border-radius: 28px;
+    height: 260px;
+    overflow: hidden;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(8, 16, 13, 0.1) 0%,
+        rgba(8, 16, 13, 0.85) 100%
+      ),
+      url("../assets/another-side/nusantara-menu.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(15, 37, 30, 0.05);
+
+    @media (min-width: 768px) {
+      grid-column: span 1;
+    }
+
+    .box-content {
+      position: absolute;
+      bottom: 2rem;
+      left: 1.8rem;
+      right: 1.8rem;
+      color: #ffffff;
+
+      h3 {
+        font-family: var(--font-primary);
+        letter-spacing: 1px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+      }
+
+      p {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: #d1dad6;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+
+  .box-coffee {
+    background-color: #faf8f5;
+    border-radius: 28px;
+    border: 1px solid rgba(15, 37, 30, 0.06);
+    box-shadow: 0 10px 30px rgba(15, 37, 30, 0.02);
+    padding: 2.2rem;
+    height: 260px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      grid-column: span 1;
+    }
+
+    .coffee-icon-circle {
+      z-index: 2;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--color-body);
+      border: 1px solid rgba(204, 143, 30, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+
+      svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+      }
+    }
+
+    .box-info {
+      z-index: 2;
+      h3 {
+        font-family: var(--font-primary);
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+        color: var(--color-green);
+        font-weight: 600;
+        margin: 0 0 0.6rem 0;
+      }
+
+      p {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: black;
+        line-height: 1.5;
+        margin: 0;
+        max-width: 60%;
+      }
+    }
+
+    .coffee-cup-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+
+  .box-more {
+    background-color: #faf8f5;
+    border-radius: 28px;
+    border: 1px solid rgba(15, 37, 30, 0.06);
+    box-shadow: 0 10px 30px rgba(15, 37, 30, 0.02);
+    padding: 2.2rem;
+    height: 260px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 90%;
+
+      .pill-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #ffffff;
+        border: 1px solid rgba(15, 37, 30, 0.06);
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #4a5652;
+
+        svg {
+          width: 13px;
+          height: 13px;
+          fill: none;
+          stroke: #72847d;
+          stroke-width: 2;
+        }
+      }
+    }
+
+    .box-info {
+      z-index: 2;
+      h3 {
+        font-family: var(--font-primary);
+        font-size: 1.6rem;
+        color: var(--color-green);
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+      }
+
+      p {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: #616e6a;
+        line-height: 1.5;
+        margin: 0;
+        max-width: 65%;
+      }
+    }
+
+    .smoothies-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 70%;
+      transform: scale(2);
+      z-index: 1;
+      object-fit: contain;
+      pointer-events: none;
+    }
+  }
+
+  .box-merchandise {
+    background-color: #faf8f5;
+    border-radius: 28px;
+    border: 1px solid rgba(15, 37, 30, 0.06);
+    box-shadow: 0 10px 30px rgba(15, 37, 30, 0.02);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .box-top {
+      z-index: 2;
+      h3 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: var(--color-green);
+        font-weight: 600;
+        margin: 0 0 0.6rem 0;
+      }
+
+      p {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: #616e6a;
+        line-height: 1.5;
+        margin: 0 0 1.5rem 0;
+        max-width: 60%;
+      }
+
+      .explore-merch-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        background-color: var(--color-green);
+        color: #ffffff;
+        border: 1px solid var(--color-green);
+        padding: 0.8rem 1.5rem;
+        border-radius: 999px;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+        .arrow-circle {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background-color: var(--color-gold);
+          color: var(--color-green);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
+
+          svg {
+            width: 12px;
+            height: 12px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+          }
+        }
+
+        &:hover {
+          background-color: var(--color-gold);
+          border-color: var(--color-gold);
+
+          .arrow-circle {
+            background-color: var(--color-green);
+            color: #ffffff;
+            transform: translate(2px, -2px);
+          }
+        }
+      }
+    }
+
+    .merch-model-img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      object-fit: cover;
+      object-position: top center;
+      pointer-events: none;
+    }
+  }
+}
