@@ -1,0 +1,284 @@
+#discover {
+  .container-global {
+    .discover-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+      }
+    }
+
+    .discover-card {
+      border-radius: 24px;
+      overflow: hidden;
+      height: 480px;
+      position: relative;
+      background-color: #ffffff;
+      box-shadow: 0 10px 30px rgba(15, 37, 30, 0.04);
+      border: 1px solid rgba(15, 37, 30, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.5rem;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &.card-text {
+        background-image: radial-gradient(
+          circle at 100% 100%,
+          rgba(204, 143, 30, 0.03) 0%,
+          transparent 60%
+        );
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(15, 37, 30, 0.08);
+          border-color: rgba(204, 143, 30, 0.2);
+        }
+
+        .card-header-icon {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(204, 143, 30, 0.08);
+          border-radius: 12px;
+          color: var(--color-gold);
+
+          svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+          }
+        }
+
+        .card-body-text {
+          margin-block: auto;
+
+          h3 {
+            font-family: var(--font-primary);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--color-green);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+          }
+
+          p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: #616e6a;
+            line-height: 1.6;
+            margin: 0;
+          }
+        }
+
+        .card-footer-btn {
+          margin-top: 1.5rem;
+          align-self: flex-start;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.8rem;
+          background-color: var(--color-gold);
+          color: #ffffff;
+          padding: 0.75rem 1.5rem;
+          border-radius: 999px;
+          font-family: var(--font-body);
+          font-size: 0.9rem;
+          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            background-color: #b37c17;
+            transform: translateX(4px);
+
+            svg {
+              transform: translateX(4px);
+            }
+          }
+        }
+      }
+
+      &.card-image-bg {
+        justify-content: flex-end;
+        padding: 0;
+        cursor: pointer;
+
+        .bg-image-wrapper {
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+          }
+        }
+
+        .gradient-overlay {
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+          background: linear-gradient(
+            to bottom,
+            rgba(15, 37, 30, 0) 20%,
+            rgba(15, 37, 30, 0.4) 50%,
+            rgba(15, 37, 30, 0.95) 100%
+          );
+        }
+
+        .card-content {
+          position: relative;
+          z-index: 3;
+          padding: 2.5rem;
+          color: #ffffff;
+
+          h3 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.8rem;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(15, 37, 30, 0.15);
+
+          .bg-image-wrapper img {
+            transform: scale(1.06);
+          }
+        }
+      }
+
+      &.card-image-only {
+        height: 380px;
+        justify-content: flex-end;
+        padding: 0;
+
+        .bg-image-wrapper {
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+          }
+        }
+
+        .gradient-overlay {
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+          background: linear-gradient(
+            to bottom,
+            rgba(15, 37, 30, 0) 30%,
+            rgba(15, 37, 30, 0.4) 60%,
+            rgba(15, 37, 30, 0.9) 100%
+          );
+        }
+
+        .card-content {
+          position: relative;
+          z-index: 3;
+          padding: 2rem;
+          color: #ffffff;
+
+          h3 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(15, 37, 30, 0.12);
+
+          .bg-image-wrapper img {
+            transform: scale(1.06);
+          }
+        }
+      }
+    }
+
+    .discover-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      height: 480px;
+    }
+
+    .discover-card-caption {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: #616e6a;
+      line-height: 1.6;
+      margin: 0;
+      padding-inline: 0.5rem;
+    }
+
+    .discover-outline-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--color-gold);
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+      }
+
+      &:hover {
+        border-color: var(--color-gold);
+        color: var(--color-gold);
+        background-color: rgba(204, 143, 30, 0.05);
+      }
+    }
+  }
+}
