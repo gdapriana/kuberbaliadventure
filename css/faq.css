@@ -220,7 +220,6 @@
           width: 24px;
           height: 24px;
           flex-shrink: 0;
-          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
           svg {
             width: 16px;
@@ -233,9 +232,8 @@
       }
 
       .faq-accordion-body {
-        max-height: 0;
+        height: 0;
         overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
         .faq-accordion-inner {
           padding: 0 1.8rem 1.5rem 5rem;
@@ -257,12 +255,6 @@
 
       &.active {
         border-color: rgba(204, 143, 30, 0.15);
-
-        .faq-accordion-header {
-          .faq-icon-wrapper {
-            transform: rotate(45deg);
-          }
-        }
       }
     }
   }
