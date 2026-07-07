@@ -18,6 +18,12 @@
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+
     .faq-tag {
       font-family: var(--font-body), sans-serif;
       font-size: 0.8rem;
