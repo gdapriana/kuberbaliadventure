@@ -1,6 +1,7 @@
 #guide {
   background-color: black;
   position: relative;
+  padding-block: 5rem;
   overflow: hidden;
 
   .container-global {
