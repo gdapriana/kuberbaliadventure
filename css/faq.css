@@ -1,0 +1,269 @@
+#faq {
+  background-color: var(--color-body);
+  position: relative;
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4.5rem;
+    }
+  }
+
+  .faq-left-col {
+    display: flex;
+    flex-direction: column;
+
+    .faq-tag {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.8rem;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+      }
+    }
+
+    .faq-title {
+      font-family: var(--font-primary), serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      color: var(--color-green);
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .faq-divider-line {
+      width: 60px;
+      height: 3px;
+      background-color: var(--color-gold);
+      margin-top: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-desc {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.92rem;
+      color: #51625c;
+      line-height: 1.6;
+      margin: 0 0 2rem 0;
+      max-width: 480px;
+    }
+
+    .faq-img-frame {
+      position: relative;
+      border-radius: 28px;
+      height: 380px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(15, 37, 30, 0.08);
+      border: 1px solid rgba(15, 37, 30, 0.04);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .floating-support-card {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 3rem);
+        background-color: rgba(13, 34, 24, 0.88);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        z-index: 3;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        .support-icon-circle {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background-color: rgba(204, 143, 30, 0.15);
+          border: 1px solid rgba(204, 143, 30, 0.25);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-gold);
+          flex-shrink: 0;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+          }
+        }
+
+        .support-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          .support-label {
+            font-family: var(--font-body), sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+          }
+
+          .support-subtext {
+            font-family: var(--font-body), sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #b1c1ba;
+            margin: 0;
+
+            span {
+              color: var(--color-gold);
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    .faq-accordion-item {
+      background-color: var(--color-body);
+      border: 1px solid white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(15, 37, 30, 0.03);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+      .faq-accordion-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        padding: 1.8rem;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+
+        .header-left {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          flex: 1;
+
+          .num-badge {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #0d2218;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-body), sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            flex-shrink: 0;
+          }
+
+          .header-sep {
+            width: 1px;
+            height: 24px;
+            background-color: rgba(15, 37, 30, 0.08);
+            flex-shrink: 0;
+          }
+
+          h4 {
+            font-family: var(--font-body), sans-serif;
+            font-size: 0.95rem;
+            color: var(--color-green);
+            font-weight: 700;
+            margin: 0;
+            padding-right: 1.5rem;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+          }
+        }
+
+        .faq-icon-wrapper {
+          color: var(--color-gold);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.2;
+          }
+        }
+      }
+
+      .faq-accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+        .faq-accordion-inner {
+          padding: 0 1.8rem 1.5rem 5rem;
+
+          p {
+            font-family: var(--font-body), sans-serif;
+            font-size: 0.9rem;
+            color: #51625c;
+            line-height: 1.65;
+            margin: 0;
+          }
+        }
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(15, 37, 30, 0.04);
+      }
+
+      &.active {
+        border-color: rgba(204, 143, 30, 0.15);
+
+        .faq-accordion-header {
+          .faq-icon-wrapper {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

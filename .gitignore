@@ -2,3 +2,5 @@
 vendo
 node_modules
 .env
+.vscode
+.idea
