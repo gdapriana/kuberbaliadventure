@@ -34,8 +34,96 @@
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/header.css" />
   </head>
   <body>
+
+    <header class="site-header">
+      <ul class="nav-left">
+        <li>
+          <a href="#">
+            Home
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Adventure Packages
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Explore Kuber
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <a href="#" class="header-brand-logo">
+        <svg class="header-logo-svg" viewBox="0 0 160 50">
+          <path d="M15 5 L35 38 L5 38 Z" fill="#0f251e" />
+          <path d="M12 38 C 15 28, 25 28, 25 18 C 25 12, 18 12, 18 12" fill="none" stroke="#68297c" stroke-width="2.5" />
+          <path d="M18 38 C 20 28, 30 28, 30 18 C 30 12, 23 12, 23 12" fill="none" stroke="#cc8f1e" stroke-width="2.5" />
+          <text x="45" y="26" font-family="Inter, sans-serif" font-weight="900" font-size="16" fill="#0f251e" letter-spacing="1">KUBER</text>
+          <text x="45" y="37" font-family="Inter, sans-serif" font-weight="700" font-size="8.2" fill="#cc8f1e" letter-spacing="1.5">BALI ADVENTURE</text>
+        </svg>
+      </a>
+
+      <ul class="nav-right">
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="header-cta-btn">Book Your Ride</a></li>
+      </ul>
+
+      <button class="mobile-nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li>
+          <a href="#">
+            Home
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Adventure Packages
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Explore Kuber
+            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="mobile-cta-wrapper">
+        <a href="#" class="header-cta-btn">Book Your Ride</a>
+      </div>
+    </div>
 
     <section id="hero">
       <video autoplay loop muted playsinline class="hero-video">
@@ -1397,5 +1485,6 @@
     <script src="js/faq.js"></script>
     <script src="js/reviews.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/header.js"></script>
   </body>
 </html>
