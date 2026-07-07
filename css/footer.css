@@ -1,0 +1,390 @@
+footer {
+  padding-top: clamp(4rem, 7vw, 7rem);
+  padding-bottom: 2.5rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(8, 22, 16, 0.96) 0%,
+      rgba(8, 22, 16, 0.99) 100%
+    ),
+    url("../assets/footer/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #081610;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(213, 178, 119, 0.1);
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1.4fr 0.9fr 1.15fr 1.15fr;
+      gap: 3.5rem;
+    }
+  }
+
+  .footer-brand-col {
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+      text-decoration: none;
+
+      .footer-logo-circle {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid var(--color-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-gold);
+        flex-shrink: 0;
+
+        svg {
+          width: 32px;
+          height: 32px;
+          fill: currentColor;
+        }
+      }
+
+      .footer-brand-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.05rem;
+
+        .brand-name {
+          font-family: var(--font-body), sans-serif;
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1;
+          letter-spacing: 0.02em;
+        }
+
+        .brand-sub {
+          font-family: var(--font-body), sans-serif;
+          font-size: 0.65rem;
+          color: var(--color-gold);
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .footer-motto {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--color-gold);
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    .footer-motto-line {
+      width: 40px;
+      height: 2px;
+      background-color: var(--color-gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand-desc {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.85rem;
+      color: #92a29c;
+      line-height: 1.6;
+      margin: 0 0 2rem 0;
+      max-width: 290px;
+    }
+
+    .footer-social-label {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 0.8rem;
+
+      .social-icon-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(213, 178, 119, 0.35);
+        color: var(--color-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+        svg {
+          width: 16px;
+          height: 16px;
+          fill: currentColor;
+        }
+
+        &:hover {
+          background-color: var(--color-gold);
+          color: #0d2218;
+          border-color: var(--color-gold);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .footer-col-title {
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 1.8rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: var(--color-gold);
+    }
+  }
+
+  .footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.85rem;
+      color: #b1c1ba;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        fill: currentColor;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        color: var(--color-gold);
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  .footer-exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .footer-exp-item {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.85rem;
+      color: #b1c1ba;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .exp-icon {
+        color: var(--color-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 2;
+        }
+      }
+
+      .exp-name {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        .coming-soon {
+          font-size: 0.72rem;
+          font-style: italic;
+          color: var(--color-gold);
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+
+  .footer-connect-col {
+    .footer-connect-desc {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.82rem;
+      color: #92a29c;
+      line-height: 1.5;
+      margin: 0 0 1.2rem 0;
+    }
+
+    .footer-newsletter-form {
+      display: flex;
+      align-items: center;
+      background-color: rgba(13, 34, 24, 0.65);
+      border: 1px solid rgba(213, 178, 119, 0.25);
+      border-radius: 30px;
+      padding: 0.3rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.3s ease;
+
+      &:focus-within {
+        border-color: var(--color-gold);
+      }
+
+      .newsletter-input {
+        background: none;
+        border: none;
+        flex: 1;
+        padding: 0.5rem 1rem;
+        color: #ffffff;
+        font-family: var(--font-body), sans-serif;
+        font-size: 0.82rem;
+        outline: none;
+
+        &::placeholder {
+          color: #62756d;
+        }
+      }
+
+      .newsletter-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--color-gold);
+        color: #0d2218;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+
+        svg {
+          width: 16px;
+          height: 16px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 3.5;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 12px rgba(204, 143, 30, 0.45);
+        }
+      }
+    }
+
+    .footer-contact-item {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.85rem;
+      color: #b1c1ba;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      .contact-icon {
+        color: var(--color-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 2;
+        }
+      }
+
+      &:hover {
+        color: var(--color-gold);
+      }
+    }
+  }
+
+  .footer-bottom-line-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-block: 3.5rem 2rem;
+
+    .bottom-line {
+      flex: 1;
+      height: 1px;
+      background-color: rgba(213, 178, 119, 0.15);
+    }
+
+    .bottom-leaf-ornament {
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    }
+  }
+
+  .footer-copyright {
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.78rem;
+    color: #72847d;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+}
