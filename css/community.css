@@ -1,0 +1,311 @@
+#community {
+  background-color: var(--color-body);
+  position: relative;
+
+  .header-wrapper {
+    justify-content: center;
+    align-items: center;
+    .text-content {
+      justify-content: center;
+      align-items: center;
+      .tag,
+      .title {
+        text-align: center;
+
+        span.orange {
+          color: var(--color-gold);
+        }
+      }
+    }
+  }
+
+  .community-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
+  .package-card {
+    border-radius: 28px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .card-nature {
+    background-color: var(--color-body);
+    border: 1px solid white;
+    box-shadow: 0 10px 30px rgba(15, 37, 30, 0.05);
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+
+
+    .card-text {
+      width: 100%;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      .leaves-icon-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(204, 143, 30, 0.06);
+        border: 1px solid rgba(204, 143, 30, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-gold);
+
+        svg {
+          width: 22px;
+          height: 22px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.8;
+        }
+      }
+
+      .card-info {
+        margin-block: 1.5rem;
+
+        h3 {
+          font-family: var(--font-primary), serif;
+          font-size: clamp(1.6rem, 3vw, 2.2rem);
+          color: var(--color-green);
+          font-weight: 600;
+          margin: 0 0 0.8rem 0;
+        }
+
+        p {
+          font-family: var(--font-body), sans-serif;
+          font-size: 0.88rem;
+          color: #616e6a;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+
+      .explore-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        background-color: var(--color-green);
+        color: #ffffff;
+        border: 1px solid var(--color-green);
+        padding: 0.8rem 1.6rem;
+        border-radius: 999px;
+        font-family: var(--font-body), sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        width: fit-content;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+        svg {
+          width: 14px;
+          height: 14px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 2.5;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          background-color: var(--color-gold);
+          border-color: var(--color-gold);
+
+          svg {
+            transform: translate(2px, -2px);
+          }
+        }
+      }
+    }
+
+    .card-img-wrapper {
+      width: 100%;
+      padding: 1.5rem;
+      display: flex;
+      align-items: stretch;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 37, 30, 0.08);
+      border-color: rgba(204, 143, 30, 0.15);
+    }
+  }
+
+  .card-culture {
+    background-color: #c48f1e;
+    box-shadow: 0 10px 30px rgba(196, 143, 30, 0.12);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+
+
+
+    h3 {
+      font-family: var(--font-primary), serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      color: #ffffff;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .pray-icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+      }
+    }
+
+    p {
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.88rem;
+      color: #ffffff;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 90%;
+    }
+
+    .learn-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #ffffff;
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.5;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        opacity: 0.8;
+
+        svg {
+          transform: translate(2px, -2px);
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(196, 143, 30, 0.25);
+    }
+  }
+
+  .card-galungan {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(8, 16, 13, 0.1) 0%,
+        rgba(8, 16, 13, 0.85) 100%
+      ),
+      url("../assets/community/galungan.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(15, 37, 30, 0.05);
+    box-shadow: 0 10px 30px rgba(8, 16, 13, 0.15);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: #ffffff;
+
+
+
+    h3 {
+      font-family: var(--font-primary), serif;
+      font-size: clamp(1.6rem, 3vw, 1.8rem);
+      color: #ffffff;
+      font-weight: 600;
+      margin: 0 0 0.8rem 0;
+    }
+
+    .card-capsule-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(8, 16, 13, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(204, 143, 30, 0.4);
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-family: var(--font-body), sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: var(--color-gold);
+        stroke: var(--color-gold);
+        stroke-width: 1.8;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(8, 16, 13, 0.3);
+      border-color: rgba(204, 143, 30, 0.2);
+    }
+  }
+}

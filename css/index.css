@@ -3,8 +3,9 @@
   --color-gold: #cc8f1e;
   --color-body: #faf8f1;
   --size-container: 1380px;
-  --font-primary: "Bebas Neue";
-  --font-body: "Inter";
+  --font-primary: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
 }
 
 html {
@@ -17,7 +18,7 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-body), sans-serif;
   background-color: var(--color-body);
 }
 
@@ -44,7 +45,7 @@ body {
     flex-direction: column;
 
     .tag {
-      font-family: var(--font-body);
+      font-family: var(--font-body), sans-serif;
       text-align: center;
       text-transform: uppercase;
       font-size: clamp(0.7rem, 4vw, 0.9rem);
@@ -52,7 +53,7 @@ body {
     }
 
     .title {
-      font-family: var(--font-primary);
+      font-family: var(--font-primary), sans-serif;
       font-size: clamp(2rem, 4vw, 3.8rem);
       text-align: center;
       color: var(--color-green);
@@ -83,5 +84,5 @@ body {
   background-color: var(--color-gold);
   padding: 0.8rem 1.2rem;
   border-radius: 999em;
-  font-family: var(--font-body);
+  font-family: var(--font-body), sans-serif;
 }

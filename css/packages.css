@@ -108,7 +108,7 @@
       }
 
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         font-size: clamp(2.6rem, 5vw, 3.8rem);
         color: #ffffff;
         text-transform: uppercase;
@@ -120,7 +120,7 @@
       }
 
       .card-subtitle {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.8rem;
         color: var(--color-gold);
         font-weight: 600;
@@ -140,7 +140,7 @@
         border: 1px solid rgba(255, 255, 255, 0.12);
         padding: 0.45rem 1.2rem;
         border-radius: 999px;
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.75rem;
         font-weight: 600;
         color: #ffffff;

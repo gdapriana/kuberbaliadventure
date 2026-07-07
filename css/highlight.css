@@ -132,7 +132,7 @@
         gap: 0.4rem;
 
         h4 {
-          font-family: var(--font-body);
+          font-family: var(--font-body), sans-serif;
           font-size: 1.1rem;
           font-weight: 600;
           color: var(--color-gold);
@@ -141,7 +141,7 @@
         }
 
         .item-category {
-          font-family: var(--font-body);
+          font-family: var(--font-body), sans-serif;
           font-size: 0.6rem;
           text-transform: uppercase;
           font-weight: 500;
@@ -152,7 +152,7 @@
         }
 
         p {
-          font-family: var(--font-body);
+          font-family: var(--font-body), sans-serif;
           font-size: 0.85rem;
           color: white;
           line-height: 1.5;
@@ -261,7 +261,7 @@
       }
 
       .page-indicator {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         color: #72847d;

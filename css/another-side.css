@@ -91,7 +91,7 @@
       }
 
       .badge-text {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.7rem;
         font-weight: 500;
         color: #ffffff;
@@ -112,7 +112,7 @@
       color: #ffffff;
 
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         letter-spacing: 1px;
         font-size: 1.8rem;
         font-weight: 600;
@@ -120,7 +120,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         color: #d1dad6;
         line-height: 1.5;
@@ -158,7 +158,7 @@
       color: #ffffff;
 
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         letter-spacing: 1px;
         font-size: 1.8rem;
         font-weight: 600;
@@ -166,7 +166,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         color: #d1dad6;
         line-height: 1.5;
@@ -216,7 +216,7 @@
     .box-info {
       z-index: 2;
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         letter-spacing: 1px;
         font-size: 1.6rem;
         color: var(--color-green);
@@ -225,7 +225,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         color: black;
         line-height: 1.5;
@@ -278,7 +278,7 @@
         border: 1px solid rgba(15, 37, 30, 0.06);
         padding: 0.4rem 0.9rem;
         border-radius: 999px;
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.75rem;
         font-weight: 500;
         color: #4a5652;
@@ -296,7 +296,7 @@
     .box-info {
       z-index: 2;
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         font-size: 1.6rem;
         color: var(--color-green);
         font-weight: 600;
@@ -304,7 +304,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         color: #616e6a;
         line-height: 1.5;
@@ -341,7 +341,7 @@
     .box-top {
       z-index: 2;
       h3 {
-        font-family: var(--font-primary);
+        font-family: var(--font-primary), sans-serif;
         font-size: 1.8rem;
         color: var(--color-green);
         font-weight: 600;
@@ -349,7 +349,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         color: #616e6a;
         line-height: 1.5;
@@ -366,7 +366,7 @@
         border: 1px solid var(--color-green);
         padding: 0.8rem 1.5rem;
         border-radius: 999px;
-        font-family: var(--font-body);
+        font-family: var(--font-body), sans-serif;
         font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
