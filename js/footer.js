@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("packages");
-  const cards = document.querySelectorAll("#packages .package-card");
+  const root = document.querySelector("footer");
+  const cards = document.querySelectorAll(
+    "footer .footer-brand-col, footer .footer-links-col, footer .footer-connect-col"
+  );
 
   if (!root || cards.length === 0) return;
 
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "back.inOut",
       scrollTrigger: {
         trigger: root,
-        start: "top 85%",
+        start: "top 90%",
         toggleActions: "restart reverse restart reverse",
       },
     }

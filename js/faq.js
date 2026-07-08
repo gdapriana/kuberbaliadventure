@@ -80,4 +80,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const root = document.getElementById("faq");
+  const items = document.querySelectorAll("#faq .faq-accordion-item");
+
+  if (root && items.length > 0) {
+    gsap.fromTo(
+      items,
+      {
+        y: "20%",
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        stagger: 0.1,
+        ease: "back.inOut",
+        scrollTrigger: {
+          trigger: root,
+          start: "top 85%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      }
+    );
+  }
 });

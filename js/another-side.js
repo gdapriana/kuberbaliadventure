@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("packages");
-  const cards = document.querySelectorAll("#packages .package-card");
+  const root = document.getElementById("another-side");
+  const cards = document.querySelectorAll(
+    "#another-side .box-lobby, #another-side .box-menu, #another-side .box-coffee, #another-side .box-more, #another-side .box-merchandise"
+  );
 
   if (!root || cards.length === 0) return;
 

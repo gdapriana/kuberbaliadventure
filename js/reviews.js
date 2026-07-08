@@ -156,4 +156,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   setTimeout(updateSlider, 100);
+
+  const reviewsRoot = document.getElementById("reviews");
+  if (reviewsRoot && cards.length > 0) {
+    gsap.fromTo(
+      cards,
+      {
+        y: "20%",
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        stagger: 0.1,
+        ease: "back.inOut",
+        scrollTrigger: {
+          trigger: reviewsRoot,
+          start: "top 85%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      }
+    );
+  }
 });
