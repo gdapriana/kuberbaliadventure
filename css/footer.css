@@ -269,23 +269,27 @@ footer {
       padding: 0.3rem;
       margin-bottom: 2rem;
       transition: border-color 0.3s ease;
+      justify-content: space-between;
 
       &:focus-within {
         border-color: var(--color-gold);
       }
 
-      .newsletter-input {
-        background: none;
-        border: none;
-        flex: 1;
-        padding: 0.5rem 1rem;
-        color: #ffffff;
-        font-family: var(--font-body), sans-serif;
-        font-size: 0.82rem;
-        outline: none;
+      label {
+        margin: 0;
+        .newsletter-input {
+          background: none;
+          border: none;
+          flex: 1;
+          padding: 0.5rem 1rem;
+          color: #ffffff;
+          font-family: var(--font-body), sans-serif;
+          font-size: 0.82rem;
+          outline: none;
 
-        &::placeholder {
-          color: #62756d;
+          &::placeholder {
+            color: #62756d;
+          }
         }
       }
 

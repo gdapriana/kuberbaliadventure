@@ -29,11 +29,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 992 && drawer.classList.contains("open")) {
-        drawer.classList.remove("open");
-        toggle.classList.remove("open");
-      }
-    }, { passive: true });
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth >= 992 && drawer.classList.contains("open")) {
+          drawer.classList.remove("open");
+          toggle.classList.remove("open");
+        }
+      },
+      { passive: true },
+    );
   }
+
+  gsap.fromTo(
+    header,
+    {
+      y: "-100%",
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power2.out",
+      delay: 0.8,
+    },
+  );
 });
